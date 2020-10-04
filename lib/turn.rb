@@ -28,7 +28,7 @@ def position_taken?(board, index)
   end
 end
 
-def move(board, index, token)
+def move(board, index, token="X")
   board[index] = token
 end
 
@@ -41,5 +41,5 @@ def turn(board)
   else
     turn(board)
   end
-  
+
 end
