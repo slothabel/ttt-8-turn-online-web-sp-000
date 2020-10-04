@@ -36,11 +36,10 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   user_input = input_to_index(input)
-  if user_input >= 9
-    #make move for input
-    move
+  if valid_move?(board, user_input)
+    move(board, index, token)
   else
-    valid_move?(board, input)
-    #ask for input again until you get valid input
+    false
   end
+  #turn(board)
 end
