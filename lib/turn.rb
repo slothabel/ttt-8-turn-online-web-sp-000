@@ -29,5 +29,18 @@ def position_taken?(board, index)
 end
 
 def move(board, index, token)
-  board[index] = index
+  board[index] = token
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  user_input = input_to_index(input)
+  if user_input >= 9
+    #make move for input
+    move
+  else
+    valid_move?(board, input)
+    #ask for input again until you get valid input
+  end
 end
