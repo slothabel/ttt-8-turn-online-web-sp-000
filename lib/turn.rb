@@ -39,7 +39,7 @@ def turn(board)
   if valid_move?(board, user_input)
     move(board, user_input, input)
   else
-    false
+    turn(board)
   end
   #turn(board)
 end
